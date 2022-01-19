@@ -7,6 +7,10 @@
 	text-decoration: none;
 }
 
+html {
+	scroll-behavior: smooth;
+}
+
 body {
 	font-size: 100%;
 	background: linear-gradient(68.15deg, rgba(0,0,0,1) 16.62%, rgba(9,78,2,1) 85.61%);
@@ -128,4 +132,36 @@ body {
 	height: 48px;
 	display: block;
 	margin: 0% auto;
+}
+
+.top {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	position: fixed;
+	right: 40px;
+	bottom: 10px;
+	opacity: 0;
+	pointer-events: none;
+	transition: all .4s;
+}
+
+.top.active {
+	bottom: 10px;
+	pointer-events: auto;
+	opacity: 1;
+}
+
+.top > h1 {
+	color: #000;
+	font-family: 'Aldrich', sans-serif;
+	font-size: 20px;
+	font-weight: 700;
+}
+
+.scrolltop {
+	position: fixed;
+	right: 10px;
+	bottom: 10px;
+	width: 100px;
 }
